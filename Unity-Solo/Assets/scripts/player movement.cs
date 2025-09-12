@@ -30,6 +30,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void Update()
     {
         //Camera Handler
+        /*
         playerCam.transform.position = transform.position + cameraOffset;
 
         cameraRotation.x += lookAxis.ReadValue<Vector2>().x * Xsensitivity;
@@ -38,7 +39,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         cameraRotation.y = Mathf.Clamp(cameraRotation.y, -camRotationLimit, camRotationLimit);
 
         playerCam.transform.rotation = Quaternion.Euler(-cameraRotation.y, cameraRotation.x, 0);
-        transform.rotation = Quaternion.AngleAxis(cameraRotation.x, Vector3.up);
+        */
+        Quaternion playerRotation = Quaternion.identity;
+        playerRotation.y = playerCam.transform.rotation.y;
+        playerRotation.w = playerCam.transform.rotation.w;
+        transform.rotation = playerRotation;
 
         //Movement System
 
