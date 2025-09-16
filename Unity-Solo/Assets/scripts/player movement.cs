@@ -1,27 +1,27 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    Vector3 cameraOffset = new Vector3(0, .5f, .5f);
-    Vector2 cameraRotation = Vector2.zero;
     Camera playerCam;
-    InputAction lookAxis;
     private Rigidbody rb;
+    Ray jumpRay;
 
     float inputX;
     float inputY;
 
-    public float Xsensitivity = .1f;
-    public float Ysensitivity = .1f;
     public float speed = 5f;
-    public float camRotationLimit = 90;
+    public float jumpHeight = 10f;
+    public float jumpRayDistance = 1.1f;
 
+    public int health = 5;
+    public int maxHealth = 5;
     private void Start()
     {
+        jumpRay = new Ray(transform.position, -transform.up);
         rb = GetComponent<Rigidbody>();
         playerCam = Camera.main;
-        lookAxis = GetComponent<PlayerInput>().currentActionMap.FindAction("Look");
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -29,21 +29,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         //Camera Handler
-        /*
-        playerCam.transform.position = transform.position + cameraOffset;
 
-        cameraRotation.x += lookAxis.ReadValue<Vector2>().x * Xsensitivity;
-        cameraRotation.y += lookAxis.ReadValue<Vector2>().y * Ysensitivity;
-
-        cameraRotation.y = Mathf.Clamp(cameraRotation.y, -camRotationLimit, camRotationLimit);
-
-        playerCam.transform.rotation = Quaternion.Euler(-cameraRotation.y, cameraRotation.x, 0);
-        */
         Quaternion playerRotation = Quaternion.identity;
         playerRotation.y = playerCam.transform.rotation.y;
         playerRotation.w = playerCam.transform.rotation.w;
         transform.rotation = playerRotation;
+
+        jumpRay.origin = transform.position;
+        jumpRay.direction = -transform.up;
 
         //Movement System
 
@@ -52,7 +51,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         tempMove.z = inputX * speed;
 
         rb.linearVelocity = (tempMove.x * transform.forward) + (tempMove.y * transform.up) + (tempMove.z * transform.right);
-     }
+    }
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -61,5 +60,30 @@ public class NewMonoBehaviourScript : MonoBehaviour
         inputX = InputAxis.x;
         inputY = InputAxis.y;
     }
+    public void Jump()
+    {
+        if (Physics.Raycast(jumpRay, jumpRayDistance))
+            rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "killzone")
+        {
+            health = 0;
+        }
 
+        if ((other.tag == "health") && (health < maxHealth))
+        {
+            health++;
+            other.gameObject.SetActive(false);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "hazard")
+        {
+            health--;
+        }
+    }
 }
+        
