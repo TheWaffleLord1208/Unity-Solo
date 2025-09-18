@@ -77,6 +77,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
             health++;
             other.gameObject.SetActive(false);
         }
+        if (other.tag == "enemy")
+        {
+            health--;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
