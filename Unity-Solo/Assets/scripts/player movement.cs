@@ -79,10 +79,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
         if (other.tag == "enemy")
         {
-            health--;
+            health -= 2;
+        }
+        if (other.tag == "largeenemy")
+        {
+            health -= 3;
+        }
+        if (other.tag == "airenemy")
+        {
+            health -= 1;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "hazard")
         {

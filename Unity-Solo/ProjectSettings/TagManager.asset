@@ -8,6 +8,9 @@ TagManager:
   - health
   - hazard
   - enemy
+  - largeenemy
+  - airenemy
+  - tower
   layers:
   - Default
   - TransparentFX
