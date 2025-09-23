@@ -11,6 +11,9 @@ TagManager:
   - largeenemy
   - airenemy
   - tower
+  - projectile
+  - pistol
+  - weapon
   layers:
   - Default
   - TransparentFX
