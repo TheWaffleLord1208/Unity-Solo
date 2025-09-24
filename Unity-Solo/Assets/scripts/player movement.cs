@@ -100,18 +100,32 @@ public class PlayerController : MonoBehaviour
                 currentWeapon.fire();
         }
     }
+   // public void fireModeSwitch()
+ //   {
+    //    if (currentWeapon.weaponID == 1)
+    //    {
+    //        currentWeapon.GetComponent<Rifle>().changeFireMode();
+     //   }
+  //  }
 
     public void Reload()
     {
         if (currentWeapon)
-            currentWeapon.reload();
+            if (!currentWeapon.reloading)
+                currentWeapon.reload();
     }
     public void Interact()
     {
         if (pickupObj)
         {
             if (pickupObj.tag == "weapon")
+            {
+                if (currentWeapon)
+                    DropWeapon();
+
                 pickupObj.GetComponent<Weapon>().equip(this);
+            }
+            pickupObj = null;
         }
         else
             Reload();

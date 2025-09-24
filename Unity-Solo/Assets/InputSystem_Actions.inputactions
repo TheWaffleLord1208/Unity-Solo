@@ -45,7 +45,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -90,6 +90,15 @@
                     "name": "Drop Weapon",
                     "type": "Button",
                     "id": "6fa20888-1951-41ff-8464-6a2dc7f7ada0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fire Mode Switch",
+                    "type": "Button",
+                    "id": "1f6676c3-3ee4-4688-90e4-89ab91817cf5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -485,11 +494,22 @@
                 {
                     "name": "",
                     "id": "53a88bb4-3939-4b6e-92e4-58327d2f2e03",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Drop Weapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3e60bc3-109a-4e88-95e9-17e0cd563585",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Fire Mode Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
