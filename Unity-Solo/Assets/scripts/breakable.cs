@@ -3,7 +3,6 @@ using UnityEngine;
 public class target : MonoBehaviour
 {
     private int health = 1;
-    private int maxHealth = 1;
     void Start()
     {
 

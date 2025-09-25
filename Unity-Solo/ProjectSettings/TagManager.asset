@@ -16,6 +16,12 @@ TagManager:
   - weapon
   - target
   - wall
+  - ui_health
+  - ui_ammo
+  - ui_clip
+  - gm
+  - weaponUI
+  - ui_pause
   layers:
   - Default
   - TransparentFX
