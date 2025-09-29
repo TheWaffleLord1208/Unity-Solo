@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public PlayerInput input;
     public Transform weaponSlot;
+    public Transform meleeSlot;
     public Weapon currentWeapon;
 
     public int health = 5;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         playerCam = Camera.main;
         weaponSlot = playerCam.transform.GetChild(0);
+        meleeSlot = playerCam.transform.GetChild(0);
     }
 
     private void Update()
@@ -64,6 +66,10 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(interactRay, out interactHit, interactDistance))
         {
             if (interactHit.collider.tag == "weapon")
+            {
+                pickupObj = interactHit.collider.gameObject;
+            }
+            if (interactHit.collider.tag == "meleeweapon")
             {
                 pickupObj = interactHit.collider.gameObject;
             }

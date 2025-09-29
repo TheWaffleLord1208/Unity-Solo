@@ -22,6 +22,7 @@ TagManager:
   - gm
   - weaponUI
   - ui_pause
+  - meleeweapon
   layers:
   - Default
   - TransparentFX
