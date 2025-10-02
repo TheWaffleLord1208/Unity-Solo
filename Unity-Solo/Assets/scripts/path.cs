@@ -1,24 +1,45 @@
+using System.Security.Cryptography;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine.Windows;
+using Random = Unity.Mathematics.Random;
 
 public class path : MonoBehaviour
 {
+    public Rigidbody rb;
+    NavMeshAgent agent;
     public Vector3 startPosition;
     public Vector3 targetPosition;
-    public float speed = 5f;
+    public float speed = .1f;
+
+    public int health = 5;
+    public int maxHealth = 5;
+
     void Start()
     {
-
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
-        if (currentPosition != targetPosition)
+        if (health <= 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            Destroy(gameObject);
         }
-        else
+
+        float time = Mathf.PingPong(Time.time * speed, 1);
+        transform.position = Vector3.Lerp(startPosition, targetPosition, time);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "projectile")
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+            health -= 2;
         }
     }
-
 }
