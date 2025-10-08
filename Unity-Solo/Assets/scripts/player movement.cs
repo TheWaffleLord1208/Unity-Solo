@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public PlayerInput input;
     public Transform weaponSlot;
-    public Transform meleeSlot;
     public Weapon currentWeapon;
+    public Holdable currentHoldable;
 
     public int health = 5;
     public int maxHealth = 5;
@@ -33,14 +33,13 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         input = GetComponent<PlayerInput>();
-        interactRay = new Ray (transform.position, transform.forward);
+        interactRay = new Ray(transform.position, transform.forward);
         jumpRay = new Ray(transform.position, -transform.up);
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         playerCam = Camera.main;
         weaponSlot = playerCam.transform.GetChild(0);
-        meleeSlot = playerCam.transform.GetChild(0);
     }
 
     private void Update()
@@ -69,7 +68,7 @@ public class PlayerController : MonoBehaviour
             {
                 pickupObj = interactHit.collider.gameObject;
             }
-            if (interactHit.collider.tag == "meleeweapon")
+            if (interactHit.collider.tag == "holdable")
             {
                 pickupObj = interactHit.collider.gameObject;
             }
@@ -106,13 +105,13 @@ public class PlayerController : MonoBehaviour
                 currentWeapon.fire();
         }
     }
-   // public void fireModeSwitch()
- //   {
+    // public void fireModeSwitch()
+    //   {
     //    if (currentWeapon.weaponID == 1)
     //    {
     //        currentWeapon.GetComponent<Rifle>().changeFireMode();
-     //   }
-  //  }
+    //   }
+    //  }
 
     public void Reload()
     {
@@ -128,8 +127,17 @@ public class PlayerController : MonoBehaviour
             {
                 if (currentWeapon)
                     DropWeapon();
+                    DropHoldable();
 
                 pickupObj.GetComponent<Weapon>().equip(this);
+            }
+            if (pickupObj.tag == "holdable")
+            {
+                if (currentHoldable)
+                    DropHoldable();
+                    DropWeapon();
+
+                pickupObj.GetComponent<Holdable>().equip(this);
             }
             pickupObj = null;
         }
@@ -144,6 +152,15 @@ public class PlayerController : MonoBehaviour
             currentWeapon.GetComponent<Weapon>().unequip();
         }
     }
+
+    public void DropHoldable()
+    {
+        if (currentHoldable)
+        {
+            currentHoldable.GetComponent<Holdable>().unequip();
+        }
+    }
+
 
     public void Move(InputAction.CallbackContext context)
     {

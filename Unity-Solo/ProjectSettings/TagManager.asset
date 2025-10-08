@@ -25,6 +25,7 @@ TagManager:
   - meleeweapon
   - bar
   - button
+  - holdable
   layers:
   - Default
   - TransparentFX

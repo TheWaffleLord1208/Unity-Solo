@@ -96,6 +96,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Drop Holdable",
+                    "type": "Button",
+                    "id": "5ff22c60-51ed-4675-b5b9-db3468311925",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Fire Mode Switch",
                     "type": "Button",
                     "id": "1f6676c3-3ee4-4688-90e4-89ab91817cf5",
@@ -541,6 +550,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90abf3c7-1cd4-4319-8c05-a43720374977",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Drop Holdable",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
