@@ -26,6 +26,7 @@ TagManager:
   - bar
   - button
   - holdable
+  - text_display
   layers:
   - Default
   - TransparentFX
