@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Windows;
 using Random = Unity.Mathematics.Random;
 
-public class BasicEnemyMovement : MonoBehaviour
+public class LargeEnemy : MonoBehaviour
 
 {
     public Rigidbody rb;
@@ -38,25 +38,24 @@ public class BasicEnemyMovement : MonoBehaviour
         }
         distance = Vector3.Distance(target.transform.position, rb.transform.position);
 
-            if (distance < detection)
-            {
+        if (distance < detection)
+        {
             agent.isStopped = false;
             agent.destination = GameObject.Find("Player").transform.position;
 
-                Vector3 direction = target.position;
-                transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
+            Vector3 direction = target.position;
+            transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
             myAnim.SetBool("isAttacking", true);
         }
-            else
-            {
+        else
+        {
             agent.isStopped = false;
-                agent.destination = GameObject.Find("tower").transform.position;
 
-                Vector3 direction = target.position;
-                transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
+            Vector3 direction = target.position;
+            transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
             myAnim.SetBool("isAttacking", true);
-            }
-            if(distance < .1)
+        }
+        if (distance < .1)
         {
             agent.isStopped = true;
             myAnim.SetBool("isAttacking", false);

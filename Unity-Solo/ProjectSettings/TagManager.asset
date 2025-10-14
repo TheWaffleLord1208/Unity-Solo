@@ -27,6 +27,7 @@ TagManager:
   - button
   - holdable
   - text_display
+  - ammo
   layers:
   - Default
   - TransparentFX

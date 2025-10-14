@@ -87,6 +87,8 @@ public class PlayerController : MonoBehaviour
         tempMove.z = inputX * speed;
 
         rb.linearVelocity = (tempMove.x * transform.forward) + (tempMove.y * transform.up) + (tempMove.z * transform.right);
+
+       
     }
 
     public void Attack(InputAction.CallbackContext context)
@@ -166,6 +168,8 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 InputAxis = context.ReadValue<Vector2>();
 
+        Debug.Log(InputAxis.x);
+
         inputX = InputAxis.x;
         inputY = InputAxis.y;
     }
@@ -192,7 +196,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.tag == "largeenemy")
         {
-            health -= 3;
+            health -= 4;
         }
         if (other.tag == "airenemy")
         {
