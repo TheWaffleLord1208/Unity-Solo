@@ -69,6 +69,10 @@ public class BasicEnemyMovement : MonoBehaviour
         {
             health -= 2;
         }
+        if (other.tag == "largeenemy")
+        {
+            health -= 3;
+        }
     }
 }
 

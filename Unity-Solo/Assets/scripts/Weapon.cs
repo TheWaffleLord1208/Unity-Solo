@@ -8,6 +8,9 @@ public class Weapon : MonoBehaviour
     PlayerController player;
 
     public GameObject projectile;
+    public AudioClip[] weaponSounds;
+    public AudioClip fireSound;
+    public AudioClip reloadSound;
     public AudioSource weaponSpeaker;
     public Transform firePoint;
     public Camera firingDirection;
@@ -45,7 +48,9 @@ public class Weapon : MonoBehaviour
     {
         if (canFire && !reloading && clip > 0 && weaponID > -1)
         {
-            weaponSpeaker.Play();
+            weaponSpeaker.resource = fireSound;
+            if (!weaponSpeaker.isPlaying)
+                weaponSpeaker.Play();
             GameObject p = Instantiate(projectile, firePoint.position, firePoint.rotation);
             p.GetComponent<Rigidbody>().AddForce(firingDirection.transform.forward * projVelocity);
             Destroy(p, projLifespan);
@@ -59,7 +64,9 @@ public class Weapon : MonoBehaviour
     public void reload()
     {
         if (clip >= clipSize)
+        {
             return;
+        }
 
         else
         {
@@ -69,6 +76,9 @@ public class Weapon : MonoBehaviour
             {
                 clip += ammo;
                 ammo = 0;
+                weaponSpeaker.resource = reloadSound;
+                if (!weaponSpeaker.isPlaying)
+                    weaponSpeaker.Play();
             }
 
             else

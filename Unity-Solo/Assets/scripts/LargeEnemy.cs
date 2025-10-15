@@ -50,6 +50,7 @@ public class LargeEnemy : MonoBehaviour
         else
         {
             agent.isStopped = false;
+            agent.destination = GameObject.FindWithTag("enemy").transform.position;
 
             Vector3 direction = target.position;
             transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
