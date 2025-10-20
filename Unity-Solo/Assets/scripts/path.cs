@@ -17,6 +17,8 @@ public class path : MonoBehaviour
     public Vector3 targetPosition;
     public float speed = .1f;
 
+    Animator myAnim;
+
     public int health = 5;
     public int maxHealth = 5;
 
@@ -24,9 +26,12 @@ public class path : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
+        myAnim = GetComponent<Animator>();
     }
     void Update()
     {
+        myAnim.SetBool("isAttacking", true);
+
         if (health <= 0)
         {
             Destroy(gameObject);

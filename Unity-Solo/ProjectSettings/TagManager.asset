@@ -29,6 +29,7 @@ TagManager:
   - text_display
   - ammo
   - mainmusic
+  - level2
   layers:
   - Default
   - TransparentFX

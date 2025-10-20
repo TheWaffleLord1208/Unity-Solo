@@ -202,6 +202,10 @@ public class PlayerController : MonoBehaviour
         {
             health -= 1;
         }
+        if (other.tag == "level2")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
     }
         private void OnCollisionEnter(Collision collision)
     {
@@ -211,4 +215,3 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
-        
