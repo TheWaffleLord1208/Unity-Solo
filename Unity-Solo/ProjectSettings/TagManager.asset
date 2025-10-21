@@ -30,6 +30,7 @@ TagManager:
   - ammo
   - mainmusic
   - level2
+  - projectile2
   layers:
   - Default
   - TransparentFX

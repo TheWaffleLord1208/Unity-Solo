@@ -24,5 +24,9 @@ public class target : MonoBehaviour
         {
             health -= 1;
         }
+        if (other.tag == "projectile2")
+        {
+            health -= 2;
+        }
     }
 }

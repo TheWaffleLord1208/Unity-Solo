@@ -1,0 +1,315 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4250431393234843324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2552440500301011732}
+  m_Layer: 0
+  m_Name: lazerblaster firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2552440500301011732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250431393234843324}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0006602881, y: -0.00063048117, z: -0.57739717, w: 0.81646293}
+  m_LocalPosition: {x: -0.0063894587, y: 1.6238703, z: 11.308853}
+  m_LocalScale: {x: 14.285701, y: 14.285713, z: 11.111117}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5435267355609790716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5541481024197271319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81646293
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0006602881
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00063048117
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.57739717
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.103
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 70.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_Name
+      value: Lazerblaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: m_TagString
+      value: weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 926780de991778d4d9f959b38adffcf2, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2552440500301011732}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7198669137504941011}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6341517852206229141}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1172127893066549227}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097930556230057409}
+  m_SourcePrefab: {fileID: 100100000, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+--- !u!1 &4622419933263143494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+  m_PrefabInstance: {fileID: 5541481024197271319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7198669137504941011
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622419933263143494}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.912748, y: 7.755116, z: 16.282307}
+  m_Center: {x: 1.9563823, y: 0.8271319, z: 3.0051877}
+--- !u!54 &6341517852206229141
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622419933263143494}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!82 &1172127893066549227
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622419933263143494}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2097930556230057409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622419933263143494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0b9ff869a2e504aa10d1c13e434ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  weaponSounds: []
+  fireSound: {fileID: 8300000, guid: 66e9766426cf89740871e7f55d5a48c1, type: 3}
+  reloadSound: {fileID: 8300000, guid: b0acf947599b38d4c937dce5f7d5753e, type: 3}
+  weaponSpeaker: {fileID: 1172127893066549227}
+  firePoint: {fileID: 2552440500301011732}
+  firingDirection: {fileID: 0}
+  canFire: 1
+  reloading: 0
+  holdToAttack: 1
+  weaponID: 0
+  weaponName: Lazerblaster
+  projLifespan: 2
+  projVelocity: 5000
+  reloadCooldown: 1
+  rof: 2
+  fireModes: 0
+  currentFireMode: 0
+  clip: 5
+  clipSize: 5
+  ammo: 10
+  maxAmmo: 10
+  ammoRefill: 0
+--- !u!4 &5435267355609790716 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b756ade9835ed8f4193c562c358620fd, type: 3}
+  m_PrefabInstance: {fileID: 5541481024197271319}
+  m_PrefabAsset: {fileID: 0}
