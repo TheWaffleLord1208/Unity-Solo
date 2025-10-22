@@ -60,5 +60,9 @@ public class AirEnemy : MonoBehaviour
         {
             health -= 3;
         }
+        if (other.tag == "projectile2")
+        {
+            health -= 5;
+        }
     }
 }

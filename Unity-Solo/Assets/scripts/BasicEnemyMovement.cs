@@ -73,6 +73,10 @@ public class BasicEnemyMovement : MonoBehaviour
         {
             health -= 3;
         }
+        if (other.tag == "projectile2")
+        {
+            health -= 5;
+        }
     }
 }
 

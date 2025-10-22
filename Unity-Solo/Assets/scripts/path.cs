@@ -48,7 +48,7 @@ public class path : MonoBehaviour
         }
         if (other.tag == "projectile2")
         {
-            health -= 2;
+            health -= 5;
         }
     }
 }
