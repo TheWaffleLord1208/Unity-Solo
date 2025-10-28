@@ -29,9 +29,11 @@ public class AirEnemy : MonoBehaviour
         myAnim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
+        myAnim = GetComponent<Animator>();
     }
     void Update()
     {
+        myAnim.SetBool("isAttacking", true);
         if (health <= 0)
         {
             Destroy(gameObject);
