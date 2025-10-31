@@ -21,14 +21,11 @@ public class Boss : MonoBehaviour
     public float detection = 30f;
     private float distance;
 
-    Animator myAnim;
-
     public int health = 5;
     public int maxHealth = 5;
 
     void Start()
     {
-        myAnim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
     }
@@ -46,14 +43,13 @@ public class Boss : MonoBehaviour
             agent.isStopped = false;
             agent.destination = GameObject.Find("Player").transform.position;
 
+            transform.LookAt(target.position, transform.up);
             Vector3 direction = target.position;
             transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
-            myAnim.SetBool("isAttacking", true);
         }
         if (distance < .1)
         {
             agent.isStopped = true;
-            myAnim.SetBool("isAttacking", false);
             Vector3 direction = -target.position;
             transform.position = Vector3.MoveTowards(transform.position, direction, speed * Time.deltaTime);
         }

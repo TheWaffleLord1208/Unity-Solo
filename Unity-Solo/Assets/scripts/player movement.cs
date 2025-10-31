@@ -168,8 +168,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 InputAxis = context.ReadValue<Vector2>();
 
-        Debug.Log(InputAxis.x);
-
         inputX = InputAxis.x;
         inputY = InputAxis.y;
     }
